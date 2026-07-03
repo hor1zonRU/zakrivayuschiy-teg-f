@@ -1,21 +1,10 @@
 :root {
   --main-font: 'Inter', sans-serif;
-  --accent-font: 'PressStart2P', monospace;
-  --background-image: repeating-linear-gradient(
-    to right,
-    #d3d3d3 2px,
-    rgba(211, 211, 211, 0) 4px
-  ),
-  repeating-linear-gradient(
-    to bottom,
-    #d3d3d3 2px,
-    rgba(211, 211, 211, 0) 4px
-  ),
-  linear-gradient(
-    to bottom,
-    #e7e7e7 0.01%,
-    #1a1a1a 100%
-  );
+  --accent-font: 'PressStart2P', serif;
+  --background-image: 
+  repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+  linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
   --container-width: clamp(375px, 100%, 700px);
   --padding: clamp(7.625rem, 7.0481rem + 2.4615vw, 8.125rem) 0;
   --card-text-font-weight: 410;

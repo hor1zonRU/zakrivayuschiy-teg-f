@@ -13,11 +13,11 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: 'wght' var(--main-card-font-weight);
+  font-variation-settings: 'wght' var(--card-text-font-weight), var(--card-title-font-weight);
 }
 
 .header {
@@ -29,7 +29,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), serif;
   border: 2px solid #000;
   margin: 100px 0 98px 0;
 }
@@ -50,15 +50,11 @@
   font-size: clamp(14px, 2vw, 23px);
 }
 
-.last-letter {
-  text-transform: lowercase;
-}
-
 /* Main */
 
 .main {
   display: grid;
-  gap: 48px;
+  gap: 49px;
 }
 
 .card {
@@ -68,7 +64,7 @@
 
 .card__title {
   font-size: 18px;
-  font-weight: var(--card-title-font-weight);
+  font-variation-settings: var(--card-title-font-weight);
   padding: 4px 10px;
   border-bottom: 2px solid #000;
 }
@@ -107,16 +103,15 @@
 }
 
 .card__text-block {
-  padding: 20px 25px;
+  padding: 21px 25px 0 25px;
+  display: grid;
+  gap: 25px;
 }
 
 .card__text {
   font-weight: 410;
   font-size: 18px;
-}
-
-.my-text {
-  margin-top: 25px;
+  line-height: 117%;
 }
 
 .card__buttons {
@@ -124,7 +119,8 @@
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
+  margin-top: 25px;
   padding: 0 25px;
 }
 
@@ -239,6 +235,11 @@ button:hover::before {
   gap: 10px;
 }
 
+.save-button__icon {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
 /* Dialog Window */
 
 .dialog {
@@ -275,6 +276,7 @@ button:hover::before {
 .dialog__button {
   width: 100%;
   padding: 10px;
+  font-family: var(--accent-font), serif;
 }
 
 .dialog::backdrop {
@@ -286,6 +288,11 @@ button:hover::before {
     flex-direction: column;
     justify-content: center;
     padding: 17px 20px;
+  }
+
+  .save-button .save-button__icon {
+    width: 28px;
+    height: 28px;
   }
 
   .dialog[open] {
