@@ -17,7 +17,7 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: 'wght' var(--card-text-font-weight), var(--card-title-font-weight);
+  font-variation-settings: 'wght' var(--card-text-font-weight);
 }
 
 .header {
@@ -64,7 +64,7 @@
 
 .card__title {
   font-size: 18px;
-  font-variation-settings: var(--card-title-font-weight);
+  font-variation-settings:'wght' var(--card-title-font-weight);
   padding: 4px 10px;
   border-bottom: 2px solid #000;
 }
@@ -192,6 +192,7 @@ button:hover::before {
 }
 
 .button__text {
+  font-weight: 14px;
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--button-text-color);
@@ -208,8 +209,7 @@ button:hover::before {
 }
 
 .card__icon-button:focus {
-  outline: none;
-  border: 2px solid #000;
+  outline: 2px solid #000;
 }
 
 .card__like-button:focus-visible {
@@ -246,7 +246,7 @@ button:hover::before {
   display: none;
   padding: 30px;
   background-color: #fff;
-  max-width: 335px;
+  max-width: 353px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -267,7 +267,7 @@ button:hover::before {
 }
 
 .dialog__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), serif;
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -277,6 +277,12 @@ button:hover::before {
   width: 100%;
   padding: 10px;
   font-family: var(--accent-font), serif;
+}
+
+.dialog__button .button__text {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 90%;
 }
 
 .dialog::backdrop {
