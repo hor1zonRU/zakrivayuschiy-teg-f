@@ -217,7 +217,7 @@ button:hover::before {
 }
 
 .card__like-button {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), serif;
   width: 130px;
   height: 40px;
   padding: 9px 17px;
